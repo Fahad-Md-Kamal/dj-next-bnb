@@ -1,11 +1,15 @@
-import Image from "next/image";
+import Categories from "./components/Categories";
+import PropertyList from "./components/properties/propertyList";
 
 export default function Home() {
   return (
-      <main className="">
-        Django BNB
-        <Image src={"/logo.png"} alt="" width={200} height={200} />
-        <h2 className="text-airbnb">Django and next rules</h2>
-      </main>
+    <main className="max-w-[1500px] mx-auto px-6">
+      <Categories />
+
+      <div className="mt-4 grid grid-cls-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+        <PropertyList />
+      </div>
+    </main>
   );
 }
